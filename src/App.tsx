@@ -33,7 +33,7 @@ function App() {
                 <Link to="/" className="text-xl font-extrabold tracking-tighter text-gray-900 flex items-center group">
                   <span className="mr-2 group-hover:rotate-12 transition-transform duration-300">🛡️</span> 
                   Incog<span className="text-primary">Agent™</span>
-                  <span className="text-xs font-medium px-2 py-0.5 ml-2 bg-gray-100 text-gray-500 rounded-full border border-gray-200">Team</span>
+                  <span className="text-xs font-medium px-2 py-0.5 ml-2 bg-gray-100 text-gray-500 rounded-full border border-gray-200">Dev</span>
                 </Link>
               </div>
               <div className="flex space-x-2 bg-white/50 p-1 rounded-full border border-gray-100 shadow-sm">
