@@ -139,7 +139,7 @@ export default function InteractiveDemo() {
     <div className="w-full max-w-6xl mx-auto space-y-6">
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div
-          className={`bg-white p-4 rounded-2xl border border-gray-100 shadow-sm transition-all ${
+          className={`bg-white/70 backdrop-blur-2xl p-4 rounded-2xl border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all ${
             isPulsing ? "highlight-pulse" : ""
           }`}
         >
@@ -149,7 +149,7 @@ export default function InteractiveDemo() {
           </div>
         </div>
         <div
-          className={`bg-white p-4 rounded-2xl border border-gray-100 shadow-sm transition-all ${
+          className={`bg-white/70 backdrop-blur-2xl p-4 rounded-2xl border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all ${
             isPulsing ? "highlight-pulse" : ""
           }`}
         >
@@ -158,7 +158,7 @@ export default function InteractiveDemo() {
             Types Detected
           </div>
         </div>
-        <div className="bg-white p-4 rounded-2xl border border-gray-100 shadow-sm">
+        <div className="bg-white/70 backdrop-blur-2xl p-4 rounded-2xl border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
           <div className="text-2xl font-bold text-green-500 font-mono text-sm uppercase mt-1">
             Local Only
           </div>
@@ -169,7 +169,7 @@ export default function InteractiveDemo() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <div className="bg-white rounded-3xl border border-gray-200 shadow-sm overflow-hidden flex flex-col">
+        <div className="bg-white/70 backdrop-blur-2xl rounded-3xl border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] overflow-hidden flex flex-col">
           <div className="px-6 py-4 border-b border-gray-50 flex justify-between items-center bg-gray-50/30">
             <span className="text-sm font-bold text-gray-400 uppercase tracking-widest">
               Input
@@ -196,7 +196,7 @@ export default function InteractiveDemo() {
           </div>
         </div>
 
-        <div className="bg-white rounded-3xl border border-gray-200 shadow-sm overflow-hidden flex flex-col">
+        <div className="bg-white/70 backdrop-blur-2xl rounded-3xl border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] overflow-hidden flex flex-col">
           <div className="px-6 py-4 border-b border-gray-50 bg-gray-50/30">
             <span className="text-sm font-bold text-gray-400 uppercase tracking-widest">
               Masked Output
@@ -226,7 +226,7 @@ export default function InteractiveDemo() {
           </div>
         </div>
 
-        <div className="lg:col-span-2 bg-white rounded-3xl border border-gray-200 shadow-sm overflow-hidden">
+        <div className="lg:col-span-2 bg-white/70 backdrop-blur-2xl rounded-3xl border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] overflow-hidden">
           <div className="px-6 py-4 border-b border-gray-50 bg-gray-50/30">
             <span className="text-sm font-bold text-gray-400 uppercase tracking-widest">
               Placeholder Mapping

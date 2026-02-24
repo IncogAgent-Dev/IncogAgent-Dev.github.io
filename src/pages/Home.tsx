@@ -25,7 +25,7 @@ export default function Home() {
       {/* 统一的卡片容器区 */}
       <section className="relative w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 z-10 space-y-8">
         
-        <section className="relative w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="relative w-full">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold text-gray-900">IncogAgent™ Live Engine Demo</h2>
           </div>
