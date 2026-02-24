@@ -1,6 +1,7 @@
 import { HashRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
 import Home from './pages/Home';
 import Mail from './pages/Mail';
+import Chat from './pages/Chat';
 
 function NavLink({ to, children }: { to: string, children: React.ReactNode }) {
   const location = useLocation();
@@ -39,6 +40,7 @@ function App() {
               <div className="flex space-x-2 bg-white/50 p-1 rounded-full border border-gray-100 shadow-sm">
                 <NavLink to="/">Home</NavLink>
                 <NavLink to="/mail">Mail</NavLink>
+                <NavLink to="/chat">Chat</NavLink>
               </div>
             </div>
           </div>
@@ -48,6 +50,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/mail" element={<Mail />} />
+            <Route path="/chat" element={<Chat />} />
           </Routes>
         </main>
       </div>
