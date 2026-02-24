@@ -45,8 +45,29 @@
       transform: scale(1);
     }
   }
+
+  .mail-fade-up {
+    opacity: 0;
+    transform: translateY(16px);
+    animation: mail-fade-up 0.7s ease forwards;
+  }
+
+  @keyframes mail-fade-up {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mail-fade-up {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
 }
