@@ -6,6 +6,47 @@
   --color-primary: #00539B; /* 你们的学术科技蓝 */
 }
 
+/* 核心动画定义 */
+@layer components {
+  /* 掩码令牌的初始状态 */
+  .mask-token {
+    @apply inline-block px-1.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20
+      opacity-0 translate-y-1 transition-all duration-300 font-mono text-sm;
+  }
+
+  /* 显示状态 */
+  .mask-token.show {
+    @apply opacity-100 translate-y-0;
+  }
+
+  /* 映射行淡入 */
+  .mapping-row {
+    @apply flex justify-between p-3 border-b border-gray-50 opacity-0 -translate-x-2 transition-all duration-300;
+  }
+
+  .mapping-row.show {
+    @apply opacity-100 translate-x-0;
+  }
+
+  /* 数据面板脉冲效果 */
+  .highlight-pulse {
+    animation: pulse-blue 0.6s ease-out;
+  }
+
+  @keyframes pulse-blue {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+      background-color: rgba(0, 83, 155, 0.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }

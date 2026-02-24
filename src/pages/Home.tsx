@@ -1,3 +1,5 @@
+import InteractiveDemo from "../components/InteractiveDemo";
+
 export default function Home() {
   return (
     <div className="relative flex flex-col items-center justify-center w-full pb-24">
@@ -23,6 +25,13 @@ export default function Home() {
       {/* 统一的卡片容器区 */}
       <section className="relative w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 z-10 space-y-8">
         
+        <section className="relative w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold text-gray-900">IncogAgent™ Live Engine Demo</h2>
+          </div>
+          <InteractiveDemo />
+        </section>
+
         {/* 🛡️ Who We Are 区块 */}
         <div className="bg-white/70 backdrop-blur-2xl rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white p-8 sm:p-12 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 pb-8 border-b border-gray-100">
@@ -42,6 +51,8 @@ export default function Home() {
             </p>
           </div>
         </div>
+
+        
 
         {/* 🎯 Our Focus 区块 */}
         <div className="bg-white/70 backdrop-blur-2xl rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white p-8 sm:p-12 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
