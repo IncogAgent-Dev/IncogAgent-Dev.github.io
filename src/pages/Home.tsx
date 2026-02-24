@@ -62,7 +62,7 @@ export default function Home() {
               <img
                 src="/duke_university_wordmark_navyblue_012169.svg"
                 alt="Duke University"
-                className="h-35 w-auto"
+                className="h-30 w-auto"
               />
             </div>
           </div>
