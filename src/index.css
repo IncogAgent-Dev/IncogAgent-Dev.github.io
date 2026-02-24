@@ -1,0 +1,11 @@
+/* 引入 Tailwind v4 核心 */
+@import "tailwindcss";
+
+/* v4 的全新主题配置方式：直接写 CSS 变量 */
+@theme {
+  --color-primary: #00539B; /* 你们的学术科技蓝 */
+}
+
+html {
+  scroll-behavior: smooth;
+}
