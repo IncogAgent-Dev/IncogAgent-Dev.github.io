@@ -81,19 +81,19 @@ export default function Mail() {
 
   return (
     <div className="relative w-full flex-grow">
-      <div className="absolute top-[-10%] left-[-5%] w-[520px] h-[520px] bg-blue-400/15 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute top-[25%] right-[-10%] w-[480px] h-[480px] bg-sky-300/20 rounded-full blur-[160px] pointer-events-none" />
-      <div className="absolute bottom-[-10%] left-[15%] w-[420px] h-[420px] bg-indigo-200/25 rounded-full blur-[160px] pointer-events-none" />
+      <div className="absolute top-[-10%] left-[-10%] w-[520px] h-[520px] bg-blue-400/20 rounded-full mix-blend-multiply blur-[128px] pointer-events-none" />
+      <div className="absolute top-[20%] right-[-8%] w-[480px] h-[480px] bg-purple-400/20 rounded-full mix-blend-multiply blur-[128px] pointer-events-none" />
+      <div className="absolute bottom-[-10%] left-[15%] w-[420px] h-[420px] bg-indigo-200/20 rounded-full mix-blend-multiply blur-[140px] pointer-events-none" />
 
       <section className="relative w-full pt-24 pb-12">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="inline-flex items-center gap-2 rounded-full bg-white/70 border border-white px-4 py-1 text-xs uppercase tracking-[0.35em] text-gray-500 shadow-sm">
-            IncogAgent Mail
-          </div>
-          <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight">
-            IncogAgent Mail, private AI inside Gmail.
+          <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600 tracking-tight leading-tight">
+            IncogAgent™ Mail:
+            <span className="mt-2 block text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-700 tracking-normal">
+              Private AI inside Gmail.
+            </span>
           </h1>
-          <p className="mt-6 text-lg sm:text-xl text-gray-600 max-w-2xl">
+          <p className="mt-6 text-lg sm:text-xl text-gray-500 font-light leading-relaxed max-w-2xl">
             Hover for instant summaries. Draft replies faster.
             <br />
             Sensitive data is masked before any model call.
@@ -126,11 +126,8 @@ export default function Mail() {
                 className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
               >
                 <div className={`${isReversed ? "lg:order-2" : ""} mail-fade-up`}>
-                  <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-gray-400">
-                    <span>Block {String(index + 1).padStart(2, "0")}</span>
-                    <span className="h-px w-8 bg-gray-200" />
-                  </div>
-                  <h2 className="mt-4 text-3xl sm:text-4xl font-bold text-gray-900">
+                  <div className="mb-4 h-px w-12 bg-gray-200" />
+                  <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
                     {section.title}
                   </h2>
                   <p className="mt-4 text-base sm:text-lg text-gray-600">
@@ -146,7 +143,7 @@ export default function Mail() {
                     ))}
                   </ul>
 
-                  <div className="mt-6 rounded-2xl border border-white bg-white/70 p-4 shadow-sm text-sm text-gray-600">
+                  <div className="mt-6 rounded-2xl border border-white bg-white/70 backdrop-blur-2xl p-4 shadow-[0_8px_30px_rgb(0,0,0,0.04)] text-sm text-gray-600">
                     <div>
                       <span className="font-semibold text-gray-800">You see:</span>{" "}
                       {section.youSee}
@@ -177,7 +174,7 @@ export default function Mail() {
                     isReversed ? "lg:order-1" : ""
                   } mail-fade-up`}
                 >
-                  <div className="rounded-3xl border border-white bg-white/70 shadow-[0_18px_60px_rgba(15,23,42,0.08)] p-3">
+                  <div className="rounded-3xl border border-white bg-white/70 backdrop-blur-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] p-3">
                     <div className="rounded-2xl overflow-hidden bg-gray-900/90">
                       <video
                         className="w-full h-full object-cover"
@@ -225,7 +222,7 @@ export default function Mail() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h3 className="text-2xl font-bold text-gray-900">FAQ</h3>
           <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-gray-600">
-            <div className="rounded-2xl border border-white bg-white/70 p-5 shadow-sm">
+            <div className="rounded-2xl border border-white bg-white/70 backdrop-blur-2xl p-5 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
               <div className="font-semibold text-gray-900">
                 Does it read my inbox automatically?
               </div>
@@ -233,7 +230,7 @@ export default function Mail() {
                 No. Summaries appear only when you hover a thread.
               </div>
             </div>
-            <div className="rounded-2xl border border-white bg-white/70 p-5 shadow-sm">
+            <div className="rounded-2xl border border-white bg-white/70 backdrop-blur-2xl p-5 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
               <div className="font-semibold text-gray-900">
                 Where is my API key stored?
               </div>
@@ -241,7 +238,7 @@ export default function Mail() {
                 Locally in extension storage. You can clear it anytime.
               </div>
             </div>
-            <div className="rounded-2xl border border-white bg-white/70 p-5 shadow-sm">
+            <div className="rounded-2xl border border-white bg-white/70 backdrop-blur-2xl p-5 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
               <div className="font-semibold text-gray-900">
                 What does the model receive?
               </div>
@@ -249,7 +246,7 @@ export default function Mail() {
                 Masked text only, with consistent placeholders.
               </div>
             </div>
-            <div className="rounded-2xl border border-white bg-white/70 p-5 shadow-sm">
+            <div className="rounded-2xl border border-white bg-white/70 backdrop-blur-2xl p-5 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
               <div className="font-semibold text-gray-900">
                 Does Add label change Gmail?
               </div>
@@ -257,7 +254,7 @@ export default function Mail() {
                 Yes. Labels are applied via Gmail API after you click.
               </div>
             </div>
-            <div className="rounded-2xl border border-white bg-white/70 p-5 shadow-sm">
+            <div className="rounded-2xl border border-white bg-white/70 backdrop-blur-2xl p-5 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
               <div className="font-semibold text-gray-900">
                 Can it send emails for me?
               </div>
