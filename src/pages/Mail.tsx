@@ -91,9 +91,9 @@ export default function Mail() {
             
             {/* 左侧：文案与按钮 (保持不变，略调宽度占比) */}
             <div className="flex-1 max-w-2xl lg:max-w-xl xl:max-w-2xl z-10">
-              <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600 tracking-tight leading-tight">
+              <h1 className="mt-6 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600 tracking-tight leading-tight">
                 IncogAgent™ Mail:
-                <span className="mt-2 block text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-700 tracking-normal">
+                <span className="mt-2 block text-xl sm:text-2xl lg:text-3xl font-semibold text-gray-700 tracking-normal">
                   Private AI inside Gmail.
                 </span>
               </h1>
