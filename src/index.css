@@ -1,6 +1,9 @@
 /* 引入 Tailwind v4 核心 */
 @import "tailwindcss";
 
+/* 使用 class 驱动 dark 变体，避免根据系统偏好自动切换 */
+@custom-variant dark (&:where(.dark, .dark *));
+
 /* v4 的全新主题配置方式：直接写 CSS 变量 */
 @theme {
   --color-primary: #00539B; /* 你们的学术科技蓝 */

@@ -138,71 +138,76 @@ export default function InteractiveDemo() {
   return (
     <div className="w-full max-w-6xl mx-auto space-y-6">
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        {/* Metrics Card 1 */}
         <div
-          className={`bg-white/70 backdrop-blur-2xl p-4 rounded-2xl border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all ${
+          className={`bg-white/70 dark:bg-gray-800/60 backdrop-blur-2xl p-4 rounded-2xl border border-white dark:border-gray-700/50 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none transition-all ${
             isPulsing ? "highlight-pulse" : ""
           }`}
         >
-          <div className="text-2xl font-bold text-primary">{metrics.count}</div>
-          <div className="text-xs text-gray-500 uppercase tracking-wider">
+          <div className="text-2xl font-bold text-primary dark:text-blue-400">{metrics.count}</div>
+          <div className="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wider">
             Placeholders
           </div>
         </div>
+        {/* Metrics Card 2 */}
         <div
-          className={`bg-white/70 backdrop-blur-2xl p-4 rounded-2xl border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all ${
+          className={`bg-white/70 dark:bg-gray-800/60 backdrop-blur-2xl p-4 rounded-2xl border border-white dark:border-gray-700/50 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none transition-all ${
             isPulsing ? "highlight-pulse" : ""
           }`}
         >
-          <div className="text-2xl font-bold text-gray-900">{metrics.types}</div>
-          <div className="text-xs text-gray-500 uppercase tracking-wider">
+          <div className="text-2xl font-bold text-gray-900 dark:text-white">{metrics.types}</div>
+          <div className="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wider">
             Types Detected
           </div>
         </div>
-        <div className="bg-white/70 backdrop-blur-2xl p-4 rounded-2xl border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+        {/* Metrics Card 3 */}
+        <div className="bg-white/70 dark:bg-gray-800/60 backdrop-blur-2xl p-4 rounded-2xl border border-white dark:border-gray-700/50 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none">
           <div className="text-2xl font-bold text-green-500 font-mono text-sm uppercase mt-1">
             Local Only
           </div>
-          <div className="text-xs text-gray-500 uppercase tracking-wider">
+          <div className="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wider">
             Security Mode
           </div>
         </div>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <div className="bg-white/70 backdrop-blur-2xl rounded-3xl border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] overflow-hidden flex flex-col">
-          <div className="px-6 py-4 border-b border-gray-50 flex justify-between items-center bg-gray-50/30">
-            <span className="text-sm font-bold text-gray-400 uppercase tracking-widest">
+        {/* Input Panel */}
+        <div className="bg-white/70 dark:bg-gray-800/60 backdrop-blur-2xl rounded-3xl border border-white dark:border-gray-700/50 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none overflow-hidden flex flex-col">
+          <div className="px-6 py-4 border-b border-gray-50 dark:border-gray-700/50 flex justify-between items-center bg-gray-50/30 dark:bg-gray-900/30">
+            <span className="text-sm font-bold text-gray-400 dark:text-gray-500 uppercase tracking-widest">
               Input
             </span>
             <button
               onClick={() => setInput(SAMPLE_TEXT)}
-              className="text-xs text-primary hover:underline"
+              className="text-xs text-primary dark:text-blue-400 hover:underline"
             >
               Reset Sample
             </button>
           </div>
           <textarea
-            className="flex-grow w-full p-6 text-gray-700 bg-transparent focus:outline-none resize-none min-h-[300px] font-sans"
+            className="flex-grow w-full p-6 text-gray-700 dark:text-gray-300 bg-transparent focus:outline-none resize-none min-h-[300px] font-sans"
             value={input}
             onChange={(event) => setInput(event.target.value)}
           />
-          <div className="p-4 bg-gray-50/50 border-t border-gray-100">
+          <div className="p-4 bg-gray-50/50 dark:bg-gray-900/50 border-t border-gray-100 dark:border-gray-700/50">
             <button
               onClick={runMasking}
-              className="w-full py-3 bg-primary text-white rounded-xl font-bold hover:bg-primary/90 transition-all shadow-md"
+              className="w-full py-3 bg-primary dark:bg-blue-600 text-white rounded-xl font-bold hover:bg-primary/90 dark:hover:bg-blue-500 transition-all shadow-md dark:shadow-none"
             >
               Run Masking Logic 🔒
             </button>
           </div>
         </div>
 
-        <div className="bg-white/70 backdrop-blur-2xl rounded-3xl border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] overflow-hidden flex flex-col">
-          <div className="px-6 py-4 border-b border-gray-50 bg-gray-50/30">
-            <span className="text-sm font-bold text-gray-400 uppercase tracking-widest">
+        {/* Masked Output Panel */}
+        <div className="bg-white/70 dark:bg-gray-800/60 backdrop-blur-2xl rounded-3xl border border-white dark:border-gray-700/50 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none overflow-hidden flex flex-col">
+          <div className="px-6 py-4 border-b border-gray-50 dark:border-gray-700/50 bg-gray-50/30 dark:bg-gray-900/30">
+            <span className="text-sm font-bold text-gray-400 dark:text-gray-500 uppercase tracking-widest">
               Masked Output
             </span>
           </div>
-          <div className="flex-grow p-6 font-sans leading-relaxed text-gray-800 overflow-y-auto min-h-[300px] whitespace-pre-wrap">
+          <div className="flex-grow p-6 font-sans leading-relaxed text-gray-800 dark:text-gray-200 overflow-y-auto min-h-[300px] whitespace-pre-wrap">
             {tokens.length > 0 ? (
               tokens.map((token) =>
                 token.type === "ph" ? (
@@ -219,16 +224,17 @@ export default function InteractiveDemo() {
                 )
               )
             ) : (
-              <span className="text-gray-300 italic">
+              <span className="text-gray-300 dark:text-gray-600 italic">
                 Results will appear here...
               </span>
             )}
           </div>
         </div>
 
-        <div className="lg:col-span-2 bg-white/70 backdrop-blur-2xl rounded-3xl border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] overflow-hidden">
-          <div className="px-6 py-4 border-b border-gray-50 bg-gray-50/30">
-            <span className="text-sm font-bold text-gray-400 uppercase tracking-widest">
+        {/* Mapping Table Panel */}
+        <div className="lg:col-span-2 bg-white/70 dark:bg-gray-800/60 backdrop-blur-2xl rounded-3xl border border-white dark:border-gray-700/50 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none overflow-hidden">
+          <div className="px-6 py-4 border-b border-gray-50 dark:border-gray-700/50 bg-gray-50/30 dark:bg-gray-900/30">
+            <span className="text-sm font-bold text-gray-400 dark:text-gray-500 uppercase tracking-widest">
               Placeholder Mapping
             </span>
           </div>
@@ -241,16 +247,16 @@ export default function InteractiveDemo() {
                     visibleRows.has(placeholder) ? "show" : ""
                   }`}
                 >
-                  <span className="font-mono text-xs text-primary font-bold bg-primary/5 px-2 py-1 rounded">
+                  <span className="font-mono text-xs text-primary dark:text-blue-400 font-bold bg-primary/5 dark:bg-blue-900/30 px-2 py-1 rounded">
                     {placeholder}
                   </span>
-                  <span className="text-sm text-gray-600 truncate max-w-[200px]">
+                  <span className="text-sm text-gray-600 dark:text-gray-300 truncate max-w-[200px]">
                     {value}
                   </span>
                 </div>
               ))
             ) : (
-              <div className="p-6 text-gray-300 italic">
+              <div className="p-6 text-gray-300 dark:text-gray-600 italic">
                 No mappings generated yet.
               </div>
             )}
