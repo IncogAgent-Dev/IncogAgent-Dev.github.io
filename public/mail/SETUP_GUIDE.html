@@ -346,7 +346,7 @@ code {
 	font-size: inherit;
 }
 
-/* Page Break : use <div class="page"/> to insert page break
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
 -------------------------------------------------------- */
 .page {
 	page-break-after: always;
@@ -365,7 +365,7 @@ code {
           : 'default'
     });
   </script>
-<h1 id="%E2%9A%99%EF%B8%8F-local-setup--installation-guide">⚙️ Local Setup &amp; Installation Guide</h1>
+<h1 id="️-local-setup--installation-guide">⚙️ Local Setup &amp; Installation Guide</h1>
 <p>Welcome to the setup guide for <strong>IncogAgent Mail</strong>.</p>
 <p>Because this extension interacts directly with your private Gmail data, it requires a Google OAuth 2.0 Client ID. To ensure maximum security and privacy, you will create your own Google Cloud Project so that your data flow remains entirely under your control.</p>
 <p>Don't worry if you haven't done this before—just follow these steps exactly!</p>
@@ -378,7 +378,7 @@ code {
 <li><strong>Important:</strong> Extract (unzip) the downloaded file to a folder on your computer.</li>
 </ol>
 <p><strong>Option B: Use Git (For developers)</strong></p>
-<pre class="hljs"><code><div>git <span class="hljs-built_in">clone</span> [https://github.com/IncogAgent-Dev/IncogAgent-Mail.git](https://github.com/IncogAgent-Dev/IncogAgent-Mail.git)
+<pre class="hljs"><code><div>git <span class="hljs-built_in">clone</span> https://github.com/IncogAgent-Dev/IncogAgent-Mail.git
 <span class="hljs-built_in">cd</span> IncogAgent-Mail
 </div></code></pre>
 <h2 id="step-2-set-up-your-google-cloud-project">Step 2: Set Up Your Google Cloud Project</h2>
@@ -432,10 +432,13 @@ code {
 <code>&quot;000000000000-placeholder.apps.googleusercontent.com&quot;</code></li>
 <li><strong>Replace</strong> that placeholder with the actual Client ID you just copied in Step 4.</li>
 </ol>
-<pre class="hljs"><code><div><span class="hljs-string">"oauth2"</span>: {
-  <span class="hljs-attr">"client_id"</span>: <span class="hljs-string">"YOUR_ACTUAL_CLIENT_ID_HERE.apps.googleusercontent.com"</span>,
-  <span class="hljs-attr">"scopes"</span>: [<span class="hljs-string">"[https://www.googleapis.com/auth/gmail.modify](https://www.googleapis.com/auth/gmail.modify)"</span>]
-}
+<pre class="hljs"><code><div><span class="hljs-attr">&quot;oauth2&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">&quot;client_id&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;YOUR_ACTUAL_CLIENT_ID_HERE.apps.googleusercontent.com&quot;</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;scopes&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+      <span class="hljs-string">&quot;https://www.googleapis.com/auth/gmail.readonly&quot;</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-string">&quot;https://www.googleapis.com/auth/gmail.modify&quot;</span>
+   <span class="hljs-punctuation">]</span>
+<span class="hljs-punctuation">}</span>
 
 </div></code></pre>
 <ol start="5">
